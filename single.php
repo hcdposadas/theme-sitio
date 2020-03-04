@@ -10,24 +10,32 @@
                              style="background-image: url('https://hcdposadas.gob.ar/wp-content/uploads/2018/05/BANNER-ONCEJALES.png');">
 
                     </section>
-				<?php else: ?>
-                    <section class="jumbotron jumboarticle"
-                             style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/portada.jpg');">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 overlap">
+                                <div class="title-description">
+									<?php the_title( '<h1>', '</h1>' ); ?>
 
-                    </section>
-				<?php endif ?>
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2 overlap">
-                            <div class="title-description">
-								<?php the_title( '<h1>', '</h1>' ); ?>
-
-                                <hr>
+                                    <hr>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+				<?php else: ?>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="title-description">
+									<?php the_title( '<h1>', '</h1>' ); ?>
+
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				<?php endif ?>
+
+
             </header>
 
             <section class="content_format">
@@ -50,35 +58,35 @@
 									comments_template();
 								}
 							endwhile;
-							
+
 							// check if the repeater field has rows of data
-							if( have_rows('archivos') ):
+							if ( have_rows( 'archivos' ) ):
 
 								// loop through the rows of data
-								while ( have_rows('archivos') ) : the_row();
+								while ( have_rows( 'archivos' ) ) : the_row();
 
 									// display a sub field value
-									$file = get_sub_field('archivo');
+									$file = get_sub_field( 'archivo' );
 
-									$url = $file['url'];
-									$title = $file['title'];
+									$url     = $file['url'];
+									$title   = $file['title'];
 									$caption = $file['caption'];
 
 									?>
-									<li>
-									  <?php 
+                                    <li>
+										<?php
 										// $url = $file['url'];
 										// $title = $file['title'];
 										// $caption = $file['caption'];
 										// $text = get_sub_field('list_item');
 										// $url = get_sub_field('item_url');
-										if ($url) {
-										  $text = '<a href="'.$url.'" target="_blank">'.$title.'</a>';
+										if ( $url ) {
+											$text = '<a href="' . $url . '" target="_blank">' . $title . '</a>';
 										}
 										echo $text;
-									  ?>
-									</li>
-									<?php
+										?>
+                                    </li>
+								<?php
 
 								endwhile;
 
@@ -87,7 +95,7 @@
 								// no rows found
 
 							endif;
-							
+
 							?>
                         </div>
 
