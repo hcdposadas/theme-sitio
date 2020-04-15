@@ -16,9 +16,24 @@
 
 	<?php wp_head(); ?>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120931985-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-120931985-1');
+
+        gtag('set', 'userId', <?php echo get_current_user_id(); ?>);
+
+    </script>
+
 </head>
 
 <body cz-shortcut-listen="true">
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v6.0&appId=2042806675935577&autoLogAppEvents=1"></script>
 <header>
 
     <nav class="navbar navbar-default">
