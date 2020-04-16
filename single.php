@@ -98,7 +98,7 @@
 										?>
                                     </div>
                                     <div class="col-md-12 text-center">
-                                        <h5>Redes sociales</h5>
+                                        <h5>Seguí sus Redes sociales</h5>
 
 	                                    <?php $ig = get_post_meta( get_the_ID(), 'instagram_concejal', true ); ?>
 	                                    <?php $yt = get_post_meta( get_the_ID(), 'youtube_concejal', true ); ?>

@@ -24,5 +24,27 @@
 
             </article>
         </section>
+
+		<?php if ( is_page( 'autoridades' ) ): ?>
+            <section>
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-md-12">
+                            <h2 class="h3 section-title">Conocé a Nuestros Concejales</h2>
+                        </div>
+                    </div>
+					<?php get_template_part( 'template-parts/content', 'slide-concejales' ); ?>
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-xs-12">
+                            <a class="btn btn-primary" href="https://hcdposadas.gob.ar/areas">Conocer todas las áreas</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+		<?php endif; ?>
     </div>
 <?php get_footer(); ?>
