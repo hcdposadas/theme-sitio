@@ -7,10 +7,9 @@
 		<?php $seccion_header_boton_texto = get_theme_mod( 'seccion_header_boton_texto' ); ?>
 		<?php $seccion_header_boton_url = get_theme_mod( 'seccion_header_boton_url' ); ?>
 		<?php if ( $seccion_header_imagen_fondo ): ?>
-        <section class="jumbotron" style="background-image: url('<?php echo $seccion_header_imagen_fondo; ?>');">
+        <section class="jumbotron">
 			<?php else: ?>
-            <section class="jumbotron"
-                     style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/portada.jpg');">
+            <section class="jumbotron" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/portada.jpg');">
 				<?php endif ?>
 				<?php if ( wp_get_nav_menu_items( "Secundario" ) ): ?>
                     <div class="jumbotron_bar">
@@ -89,24 +88,28 @@
                         </div>
                     </div>
 				<?php endif ?>
-                <div class="jumbotron_body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-                                <h1><?php echo $seccion_header_titulo; ?></h1>
-                                <p><?php echo $seccion_header_descripcion; ?></p>
-                            </div>
+				<?php echo do_shortcode( '[recent_post_slider post_type="page" design="design-7" show_date="false" show_author="false" show_category_name="false" read_more_text="VER MÁS" slider_height="500" extra_class="home-destacados" category="2"]' ); ?>
+            </section>
+
+	        <?php $seccion_destacado_activo = get_theme_mod( 'seccion_destacado_activo' ); ?>
+	        <?php $seccion_destacado_titulo = get_theme_mod( 'seccion_destacado_titulo' ); ?>
+	        <?php $seccion_destacado_boton_texto = get_theme_mod( 'seccion_destacado_boton_texto' ); ?>
+	        <?php $seccion_destacado_boton_url = get_theme_mod( 'seccion_destacado_boton_url' ); ?>
+
+            <?php if ( $seccion_destacado_activo ) { ?>
+                <div class="jumbotron jumbotron-destacado p-t-2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="text-right"><?php print $seccion_destacado_titulo; ?></p>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-                                <a href="<?php echo $seccion_header_boton_url; ?>" target="_blank"
-                                   class="btn btn-primary btn-lg"><?php echo $seccion_header_boton_texto; ?></a>
-                            </div>
+                        <div class="col-md-6">
+                            <p><a class="btn btn-primary " href="<?php print $seccion_destacado_boton_url; ?>"
+                                  role="button"><?php print $seccion_destacado_boton_texto; ?></a></p>
                         </div>
                     </div>
+
                 </div>
-                <div class="overlay"></div>
-            </section>
+            <?php } ?>
 
 			<?php $seccion_acercade_activo = get_theme_mod( 'seccion_acercade_activo' ); ?>
 			<?php $seccion_acercade_titulo = get_theme_mod( 'seccion_acercade_titulo' ); ?>
@@ -268,7 +271,7 @@
 								<?php
 
 								$args            = array(
-									'numberposts' => '10',
+									'numberposts' => '11',
 									'post_type'   => 'comision',
 									'orderby'     => 'post_date',
 									'order'       => 'ASC',

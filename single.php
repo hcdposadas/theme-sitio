@@ -302,5 +302,26 @@
                 </div>
             </section>
 		<?php endif; ?>
+
+	    <?php $seccion_destacado_activo = get_theme_mod( 'seccion_destacado_activo' ); ?>
+	    <?php $seccion_destacado_titulo = get_theme_mod( 'seccion_destacado_titulo' ); ?>
+	    <?php $seccion_destacado_boton_texto = get_theme_mod( 'seccion_destacado_boton_texto' ); ?>
+	    <?php $seccion_destacado_boton_url = get_theme_mod( 'seccion_destacado_boton_url' ); ?>
+
+	    <?php if ( $seccion_destacado_activo ) { ?>
+            <div class="jumbotron jumbotron-destacado p-t-2">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="text-right"><?php print $seccion_destacado_titulo; ?></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><a class="btn btn-primary " href="<?php print $seccion_destacado_boton_url; ?>"
+                              role="button"><?php print $seccion_destacado_boton_texto; ?></a></p>
+                    </div>
+                </div>
+
+            </div>
+	    <?php } ?>
+
     </main>
 <?php get_footer(); ?>

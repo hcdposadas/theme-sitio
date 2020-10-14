@@ -59,9 +59,11 @@
 							<?php if ( $poncho_celular ) : ?>
                                 <strong>Celular:</strong> <?php echo $poncho_celular ?><br>
 							<?php endif; ?>
-                            <strong>Teléfonos:</strong> <?php echo $poncho_telefono ?><br>
                             <strong>Correo electrónico:</strong> <a
                                     href="mailto:<?php echo $poncho_mail ?>"><?php echo $poncho_mail ?></a>
+                        </p>
+                        <p>
+	                        <?php echo get_theme_mod( 'seccion_footer_descripcion_3' ); ?>
                         </p>
 
                     </div>

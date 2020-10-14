@@ -897,6 +897,82 @@ function poncho_extra_customize_register( $wp_customize ) {
 		)
 	);
 
+	$wp_customize->add_section(
+		'poncho_seccion_destacado',
+		[
+			'title'         => __( 'Destacado', 'poncho' ),
+			'priority'      => 611,
+			'capability'    => 'edit_theme_options',
+			'theme_support' => '',
+			'panel'         => 'poncho_secciones_panel'
+		]
+	);
+
+	$wp_customize->add_setting(
+		'seccion_destacado_activo',
+		[
+			'default'           => true,
+			'sanitize_callback' => '',
+		]
+	);
+
+	$wp_customize->add_control(
+		'seccion_destacado_activo',
+		[
+			'label'   => __( 'Activo', 'poncho' ),
+			'section' => 'poncho_seccion_destacado',
+			'type'    => 'checkbox',
+		]
+	);
+
+	$wp_customize->add_setting(
+		'seccion_destacado_titulo',
+		[
+			'default'           => 'Lorem ipsum dolor sit amet',
+			'sanitize_callback' => '',
+		]
+	);
+	$wp_customize->add_control(
+		'seccion_destacado_titulo',
+		[
+			'label'   => __( 'Título', 'poncho' ),
+			'section' => 'poncho_seccion_destacado',
+			'type'    => 'text',
+		]
+	);
+
+	$wp_customize->add_setting(
+		'seccion_destacado_boton_texto',
+		[
+			'default'           => 'Learn More',
+			'sanitize_callback' => 'sanitize_text_field',
+		]
+	);
+	$wp_customize->add_control(
+		'seccion_destacado_boton_texto',
+		[
+			'label'   => __( 'Texto Botón', 'poncho' ),
+			'section' => 'poncho_seccion_destacado',
+			'type'    => 'text',
+		]
+	);
+
+	$wp_customize->add_setting(
+		'seccion_destacado_boton_url',
+		[
+			'default'           => '#about',
+			'sanitize_callback' => 'sanitize_text_field',
+		]
+	);
+	$wp_customize->add_control(
+		'seccion_destacado_boton_url',
+		[
+			'label'   => __( 'URL Botón', 'poncho' ),
+			'section' => 'poncho_seccion_destacado',
+			'type'    => 'text',
+		]
+	);
+
 
 	//	seccion acerca de
 	$wp_customize->add_section(
