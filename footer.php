@@ -18,6 +18,14 @@
                 <p>
                     <a target="_blank" href="http://posadas.gob.ar/">Municipalidad de Posadas</a>
                 </p>
+                <p>
+                    <ul>
+                    <li> <a href="https://hcdposadas.gob.ar/audiencias-publicas">Audiencia Pública</a> </li>
+                    <li><a href="https://hcdposadas.gob.ar/mesa-de-informes">Mesa de Informes</a></li>
+                    <li><a href="https://hcdposadas.gob.ar/manual-de-marca-con-los-logos-y-mas/">Recursos Gráficos</a></li>
+                    <li><a href="https://hcdposadas.gob.ar/category/plandelabor/">Plan de Labor</a></li>
+                </ul>
+                </p>
             </div>
             <div class="col-md-4">
 

@@ -16,7 +16,7 @@ function meta_hcd() {
 
 	$output = "<meta name=\"description\" content=\"Honorable Concejo Deliberante de la Ciudad de Posadas\" />";
 	$output .= "<meta name=\"robots\" content=\"ALL\" />";
-	$output .= "<meta name=\"revisit-after\" content=\"15 days\" />";
+	$output .= "<meta name=\"revisit-after\" content=\"2 days\" />";
 	$output .= "<meta name=\"classification\" content=\"Government\" />";
 	$output .= "<meta name=\"resource-type\" content=\"document\" />";
 	$output .= "<meta name=\"abstract\" content=\"HCD Posadas\" />";
@@ -42,7 +42,7 @@ function poncho_enqueue_scripts() {
 
 	wp_enqueue_script( 'bundle', get_template_directory_uri() . '/dist/bundle.js', [], '1.0.0', false );
 
-	wp_enqueue_style( 'hcd-css', get_stylesheet_directory_uri() . '/hcd.css' );
+	wp_enqueue_style( 'hcd-css', get_stylesheet_directory_uri() . '/hcd.css', [], '2022.1.1' );
 
 }
 
@@ -203,7 +203,7 @@ function onesignal_send_notification_filter($fields, $new_status, $old_status, $
         "myappurl" => $fields_pod['url'],
 		"id" => $post->ID,
 		"tipo" => 'post'
-	); 
+	);
 	/* Unset the URL to prevent opening the browser when the notification is clicked */
     unset($fields_pod['url']);
     return $fields_pod;
@@ -220,13 +220,13 @@ function onesignal_exclude_post_filter($new_status, $old_status, $post) {
 
 add_filter('json_api_encode', 'json_api_encode_acf');
 
-function json_api_encode_acf($response) 
+function json_api_encode_acf($response)
 {
     if (isset($response['posts'])) {
         foreach ($response['posts'] as $post) {
             json_api_add_acf($post); // Add specs to each post
         }
-    } 
+    }
     else if (isset($response['post'])) {
         json_api_add_acf($response['post']); // Add a specs property
     }
@@ -234,7 +234,7 @@ function json_api_encode_acf($response)
     return $response;
 }
 
-function json_api_add_acf(&$post) 
+function json_api_add_acf(&$post)
 {
     $post->acf = get_fields($post->id);
 }
@@ -242,12 +242,12 @@ function json_api_add_acf(&$post)
 /*
  * Add Menu Order field to portfolio
  */
- 
+
 add_action('admin_init', 'mpe_add_portfolio_page_attributes');
 function mpe_add_portfolio_page_attributes(){
- 
+
     add_post_type_support( 'autoridad', 'page-attributes' );
- 
+
 }
 
 ?>

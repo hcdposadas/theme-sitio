@@ -98,13 +98,11 @@
 
             <?php if ( $seccion_destacado_activo ) { ?>
                 <div class="jumbotron jumbotron-destacado p-t-2">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p class="text-right"><?php print $seccion_destacado_titulo; ?></p>
-                        </div>
-                        <div class="col-md-6">
-                            <p><a class="btn btn-primary " href="<?php print $seccion_destacado_boton_url; ?>"
-                                  role="button"><?php print $seccion_destacado_boton_texto; ?></a></p>
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <a class="btn btn-primary " href="<?php print $seccion_destacado_boton_url; ?>"
+                               role="button"><?php print $seccion_destacado_titulo; ?></a>
+
                         </div>
                     </div>
 
@@ -192,7 +190,7 @@
 							// Get the URL of this category
 							$category_link = get_category_link( $category_id );
 
-							$args         = array( 'numberposts' => '4', 'category' => $category_id );
+							$args         = array( 'numberposts' => '4', 'category' => $category_id, 'post_status' => ['publish'] );
 							$recent_posts = wp_get_recent_posts( $args );
 							foreach ( $recent_posts as $recent ) {
 								?>
@@ -242,16 +240,16 @@
 
             <!-- CONCEJALES-->
 
-            <section>
-                <div class="container">
-                    <div class="row ">
-                        <div class="col-md-12">
-                            <h2 class="h3 section-title">Conocé a Nuestros Concejales</h2>
-                        </div>
-                    </div>
-					<?php get_template_part( 'template-parts/content', 'slide-concejales' ); ?>
-                </div>
-            </section>
+<!--            <section>-->
+<!--                <div class="container">-->
+<!--                    <div class="row ">-->
+<!--                        <div class="col-md-12">-->
+<!--                            <h2 class="h3 section-title">Conocé a Nuestros Concejales</h2>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--					--><?php //get_template_part( 'template-parts/content', 'slide-concejales' ); ?>
+<!--                </div>-->
+<!--            </section>-->
 
             <!-- CONCEJALES-->
 

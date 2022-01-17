@@ -1,8 +1,3 @@
-.jumbotron-destacado {
-    /*background-image: linear-gradient(45deg, rgba(60, 140, 101,1) 0%, rgba(187, 27, 97,1) 100%);*/
-    background-image: linear-gradient(45deg, rgba(60, 140, 101,1) 0%, rgba(187, 27, 97,1) 100%);
-}
-
 .custom-logo{
     width: 300px;
     height:auto;
@@ -103,7 +98,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(45deg, rgba(60, 140, 101,1) 0%, rgba(187, 27, 97,1) 100%);
+    background-image: linear-gradient(45deg, rgba(1,128,66,1) 0%, rgba(183,194,56,1) 100%);
     opacity: .7;
     content: '';
 }
@@ -132,7 +127,7 @@ section {
 }
 
 a.panel:hover, a.panel:focus {
-    background-image: linear-gradient(45deg, rgba(60, 140, 101,1) 0%, rgba(187, 27, 97,1) 100%);
+    background-image: linear-gradient(45deg, rgba(1,128,66,1) 0%, rgba(183,194,56,1) 100%);
 }
 
 .btn-primary {
@@ -140,16 +135,16 @@ a.panel:hover, a.panel:focus {
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.focus, .btn-primary.active {
-    background-image: linear-gradient(45deg, rgba(60, 140, 101,1) 0%, rgba(187, 27, 97,1) 100%);
+    background-image: linear-gradient(45deg, rgba(1,128,66,1) 0%, rgba(183,194,56,1) 100%);
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    background-image: linear-gradient(45deg, rgba(60, 140, 101,1) 0%, rgba(187, 27, 97,1) 100%);
+    background-image: linear-gradient(45deg, rgba(1,128,66,1) 0%, rgba(183,194,56,1) 100%);
     color: #fff;
 }
 
 .social-share li:hover {
-    background-image: linear-gradient(45deg, rgba(60, 140, 101,1) 0%, rgba(187, 27, 97,1) 100%);
+    background-image: linear-gradient(45deg, rgba(1,128,66,1) 0%, rgba(183,194,56,1) 100%);
     color: #fff;
 }
 
@@ -166,9 +161,10 @@ a.panel:hover, a.panel:focus {
 }
 
 .glyphicon {
-    background: -moz-linear-gradient(45deg, rgba(60, 140, 101,1) 0%, rgba(187, 27, 97,1) 100%);
-    background: -webkit-linear-gradient(45deg, rgba(60, 140, 101,1) 0%, rgba(187, 27, 97,1) 100%);
-    background: linear-gradient(45deg, rgba(60, 140, 101,1) 0%, rgba(187, 27, 97,1) 100%);
+    background: -moz-linear-gradient(45deg, rgba(1,128,66,1) 0%, rgba(183,194,56,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(1,128,66,1) 0%, rgba(183,194,56,1) 100%);
+    background: linear-gradient(45deg, rgba(1,128,66,1) 0%, rgba(183,194,56,1) 100%);
+    */: ;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
@@ -201,16 +197,3 @@ a.panel:hover, a.panel:focus {
         display: block;
     }
 }
-
-
-/*.btn-primary {*/
-/*    background-color: #3C8C65;*/
-/*}*/
-
-/*a.panel:hover, a.panel:focus {*/
-/*    background: #3C8C65;*/
-/*}*/
-
-/*a {*/
-/*    color: #3C8C65;*/
-/*}*/
